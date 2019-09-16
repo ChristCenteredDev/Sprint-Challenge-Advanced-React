@@ -24,7 +24,6 @@ class App extends React.Component {
           <Navbar />
         </div>
         <div className='content'>
-          {console.log(this.state.data)}
           {this.state.data.map(players => (
             <Card players={players} key={players.id} />
           ))}

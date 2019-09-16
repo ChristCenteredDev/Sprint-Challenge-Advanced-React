@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className='navbar'>
         <Toggle darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
-      Content below....
+      Women's World Cup
     </div>
   );
 };

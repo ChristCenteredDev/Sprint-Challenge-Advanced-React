@@ -3,9 +3,8 @@ import React from 'react';
 const Card = props => {
   return (
     <div className='card'>
-      <span>Name: {props.players.name}</span>
-      <br></br>
-      <span>Country: {props.players.country}</span>
+      <h3>Name: {props.players.name}</h3>
+      <h3>Country: {props.players.country}</h3>
     </div>
   );
 };
