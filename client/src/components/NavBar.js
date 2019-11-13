@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDarkMode } from 'use-hooks';
+import { useDarkMode } from './hooks/useDarkMode';
 import Toggle from './Toggle';
 
 function Navbar() {
@@ -10,7 +10,7 @@ function Navbar() {
       <div className='navbar'>
         <Toggle darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
-      Women's World Cup
+      <div id='title'>Women's World Cup</div>
     </div>
   );
 }

@@ -1,16 +1,22 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import App from './App';
+import * as rtl from '@testing-library/react';
+import Card from './components/Card';
+import NavBar from './components/NavBar';
 
 // Testing Renders
-test('Card renders without crashing', () => {
-  render(<Card />);
-});
-
 test('NavBar renders without crashing', () => {
-  render(<NavBar />);
+  rtl.render(<NavBar />);
 });
 
 test('App renders without crashing', () => {
-  render(<App />);
+  rtl.render(<App />);
+});
+
+it('renders "Title of page" text', () => {
+  const wrapper = rtl.render(<App />);
+  // IMPORTANT
+  // wrapper.queryByText() returns either the node, or null:
+  const hasTitleText = document.querySelector('#title');
+  expect(hasTitleText.innerHTML).toMatch("Women's World Cup");
 });
